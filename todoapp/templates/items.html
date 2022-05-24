@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="additem">
+        <input type="submit" value="Add New Todo Item">
+    </form> 
+    <h2>{{todolist.name}}</h2>
+    {% if todoitem %} 
+        <div>Here is the list of items to do</div>
+        {% for item in todoitem %}
+            <div>
+                    {{item.description}}
+                    <a href="{% url 'completeitem' item.id %}">
+                    {% if item.completed %} 
+                    <button type="button">Complete!</button>
+                    {% else %}
+                    <button type="button">Incomplete!</button>
+                    {% endif %}
+                </a>
+                <a href="{% url 'deleteitem' item.id %}">
+                <button type="button">Delete</button></a>
+                <a href="{% url 'updateitem' item.id %}">
+                <button type="button">Update</button></a>
+            </div>
+        {% endfor %}
+        </div>
+    {% else %}
+        <div>This list has no items</div>
+    {% endif %} 
+</body>
+</html>

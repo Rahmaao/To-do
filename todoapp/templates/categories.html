@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="{% url 'categories' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="name">
+    <input type="submit" value="Create New Category">
+</form> 
+
+
+<h2>List of Categories</h2>
+    {% for category in categories %}
+        <div>
+            <a href="{% url 'todo' category.id %}">
+                {{category.name}}
+            </a>
+        </a>
+        <a href="{% url 'deletecategory' category.id %}">
+        <button type="button">Delete</button></a>
+        <a href="{% url 'updatecategory' category.id %}">
+        <button type="button">Update</button></a>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main page */
+
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url("/static/images/bg.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    background-image: url(./medium-bg.png);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .container {
+    background-image: url(./medium-bg.png);
+  }
+}
+
+.header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: caveat;
+  font-size: 80px;
+  color: #5e057e;
+}
+
+@media screen and (max-width: 650px) {
+  .header h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    background-image: url(./small-bg.png);
+    background-size: cover;
+  }
+  .header h1 {
+    font-size: 45px;
+  }
+}
+
+.enter button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: caveat;
+  width: 110px;
+  height: 70px;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f1f1d8;
+  font-size: 30px;
+  font-weight: 900;
+  cursor: pointer;
+  color: #5e057e;
+  border-color: #5e057e;
+}
+
+.enter {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-family: caveat;
+  width: 100px;
+  height: 100px;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* Categories Page */
+
+.title h1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: caveat;
+  font-size: 50px;
+  color: #5e057e;
+}
+
+.container2 {
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url(./bg.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title {
+  width: auto;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.addbar {
+  width: 80%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.addbar form {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 850px) {
+  .addbar {
+    justify-content: center;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .addbar input[type="text"] {
+    width: 250px;
+    margin-right: 5px;
+  }
+}
+
+input[type="text"] {
+  width: 500px;
+  height: 55px;
+  padding: 12px 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-color: #5e057e;
+  background-color: #f1f1d8;
+  font-family: "caveat";
+  font-size: 25px;
+}
+input[type="text"]:focus {
+  background-color: #f1f1d8;
+  color: #5e057e;
+}
+
+::placeholder {
+  color: #5e057e;
+  opacity: 0.5;
+}
+
+.create {
+  font-family: caveat;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #5e057e;
+  cursor: pointer;
+  color: #f1f1d8;
+  border-color: #5e057e;
+  /* border: 10px solid #5E057E; */
+  font-size: 25px;
+}
+
+.back {
+  font-family: caveat;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #5e057e;
+  cursor: pointer;
+  color: #f1f1d8;
+  border-color: #5e057e;
+  font-size: 25px;
+}
+
+/* the objects */
+
+.container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  /* background-color: lightgrey; */
+  width: 750px;
+  height: 50px;
+  padding: 10px, 10px, 10px, 10px;
+}
+
+.text {
+  background-color: #f1f1d8;
+  color: #5e057e;
+  opacity: 0.9;
+  border: 1px solid #707070;
+  width: 450px;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  font-family: caveat;
+  font-size: 25px;
+  padding-left: 1rem;
+}
+
+.delete {
+  font-family: caveat;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #5e057e;
+  cursor: pointer;
+  color: #f1f1d8;
+  border-color: #5e057e;
+  font-size: 25px;
+}
+
+.update {
+  font-family: caveat;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #5e057e;
+  cursor: pointer;
+  color: #f1f1d8;
+  border-color: #5e057e;
+  font-size: 25px;
+}
+
+.complete {
+  font-family: caveat;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #5e057e;
+  cursor: pointer;
+  color: #f1f1d8;
+  border-color: #5e057e;
+  font-size: 25px;
+}
+
+.btn {
+  font-family: caveat;
+  width: 110px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #5e057e;
+  cursor: pointer;
+  color: #f1f1d8;
+  border-color: #5e057e;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 850px) {
+  .list {
+    width: 400px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container3 {
+    width: 90vw;
+  }
+  .text {
+    width: 250px;
+  }
+  .update {
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
+    margin-left: 1rem;
+  }
+
+  .btn {
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: caveat;
+    border-radius: 5px;
+
+    font-size: 17px;
+    font-weight: 900;
+    cursor: pointer;
+    background: #5e057e;
+    color: #fff;
+    border-color: #5e057e;
+    margin-left: 1rem;
+  }
+  .delete {
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
+  }
+  .complete {
+    font-size: 20px;
+    height: 30px;
+    width: 70px;
+    margin-left: 1rem;
+  }
+
+  input[type="text"] {
+    font-size: 17px;
+  }
+}
+
+/* update page */
+
+.updatebar {
+  width: 40%;
+  /* background-color: orange; */
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.updatebuttons {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .updatebar {
+    width: 100%;
+    margin-top: 100px;
+  }
+
+  #updatename {
+    font-size: 30px;
+  }
+}
+
+/* .updatecontainer{
+        width: 100%;
+        min-height: 100vh;
+        background-color: palegreen;
+    } */
